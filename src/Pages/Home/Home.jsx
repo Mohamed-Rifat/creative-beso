@@ -325,18 +325,17 @@ export default function Home() {
             </motion.p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:mx-32">
             {projects.map((project, index) => (
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.3 }}
-                whileHover={{ y: -15, scale: 1.03 }}
-                className="group relative overflow-hidden rounded-md shadow-2xl hover:shadow-purple-500/20 transition-all duration-500"
+                className="group relative overflow-hidden rounded-md shadow-2xl hover:shadow-purple-500/20 "
               >
                 <div className="relative h-96 overflow-hidden">
-                  <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-all duration-700 blur-sm group-hover:blur-0" loading="lazy" />
+                  <img src={project.image} alt={project.title} className="w-full h-full object-cover blur-sm group-hover:blur-0" loading="lazy" />
                 </div>
 
                 <div className="absolute inset-0 flex flex-col justify-end p-8 text-white z-10">
@@ -451,7 +450,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 lg:mx-32">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -502,14 +501,13 @@ export default function Home() {
             </motion.p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 lg:mx-32">
             {voiceServices.map((service, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                whileHover={{ y: -10 }}
                 className="group bg-white dark:bg-gray-800 rounded-md p-8 shadow-lg border border-gray-200 dark:border-gray-700 duration-300"
               >
                 <div className="w-16 h-16 rounded-full bg-purple-50 dark:bg-gray-700 flex items-center justify-center mb-6 group-hover:bg-white dark:group-hover:bg-gray-600 transition-colors">
