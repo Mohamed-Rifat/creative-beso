@@ -68,120 +68,103 @@ const Projects = () => {
             ,
             {
                 id: 7,
-                title: "Educational Project 1",
-                description: "Voice narration for online course",
+                title: "Ministry of Youth Radio Campagin 2025",
                 package: "package2",
                 audioUrl: "/audio/1-Ministry-of-Youth - RadioCampaign 2025.mp3",
             },
             {
                 id: 8,
-                title: "Social Media Project 1",
-                description: "Viral video voice over",
+                title: "Remas Land Ramadan 2025",
                 package: "package2",
                 audioUrl: "/audio/2-Remas Land - Ramadan 2025 Ad.mp3",
             },
             {
                 id: 9,
-                title: "Educational Project 1",
-                description: "Voice narration for online course",
+                title: "Elbehairy Paints 2025",
                 package: "package2",
                 audioUrl: "/audio/3-El Behairy Paints - 2025 Campaign.mp3",
             },
             {
                 id: 10,
-                title: "Social Media Project 1",
-                description: "Viral video voice over",
-                package: "package3",
+                title: "Business Ya Shabab 2025",
+                package: "package2",
                 audioUrl: "/audio/4-Business Ya Shabab - 2025 Conference Ad.mp3",
             },
             {
                 id: 11,
-                title: "Educational Project 1",
-                description: "Voice narration for online course",
+                title: "Vemto Paints",
                 package: "package2",
                 audioUrl: "/audio/5-Vemto Paints -Commercial.mp3",
             },
             {
                 id: 12,
-                title: "Social Media Project 1",
-                description: "Viral video voice over",
-                package: "package3",
+                title: "Leona Pet Insurance",
+                package: "package2",
                 audioUrl: "/audio/6-Leona Pet Insurance - Comic Sketch.mp3",
             },
             {
                 id: 13,
-                title: "Educational Project 1",
-                description: "Voice narration for online course",
+                title: "Sofimer Med",
                 package: "package2",
                 audioUrl: "/audio/7-Sofimer Med - Commercial 2025.mp3",
             },
             {
                 id: 14,
-                title: "Social Media Project 1",
-                description: "Viral video voice over",
-                package: "package3",
+                title: "Si Perfume",
+                package: "package2",
                 audioUrl: "/audio/8-SI Perfume - Social Media Ad 2024.mp3",
             },
             {
                 id: 15,
-                title: "Educational Project 1",
-                description: "Voice narration for online course",
+                title: "Royal Oud",
                 package: "package2",
                 audioUrl: "/audio/9-Royal Oud - Arabic Voiceover Spot.mp3",
             },
             {
                 id: 16,
-                title: "Social Media Project 1",
-                description: "Viral video voice over",
-                package: "package3",
+                title: "Pure Perfume",
+                package: "package2",
                 audioUrl: "/audio/10-Pure Perfume - Podcast Ad.mp3",
             },
             {
                 id: 17,
-                title: "Educational Project 1",
-                description: "Voice narration for online course",
+                title: "Story Post Episode",
                 package: "package2",
                 audioUrl: "/audio/11-StoryPost Episode - Storytelling.mp3",
             },
             {
                 id: 18,
-                title: "Social Media Project 1",
-                description: "Viral video voice over",
-                package: "package3",
+                title: "Ibn Tulun Mosque",
+                package: "package2",
                 audioUrl: "/audio/12-Ibn Tulun Mosque - Documentary VO.mp3",
             },
             {
                 id: 19,
-                title: "Educational Project 1",
-                description: "Voice narration for online course",
+                title: "Makanak Stores - Brand Teaser",
                 package: "package2",
                 audioUrl: "/audio/13-Makanak Stores - Brand Teaser.mp3",
             },
             {
                 id: 20,
-                title: "Social Media Project 1",
-                description: "Viral video voice over",
+                title: "Leona Insurance",
                 package: "package2",
                 audioUrl: "/audio/14-Leona Insurance - Pet Carnival Ad.mp3",
             },
             {
                 id: 21,
-                title: "Social Media Project 1",
-                description: "Viral video voice over",
+                title: "Lebaladna Mega Day",
                 package: "package3",
                 videoUrl: "https://www.instagram.com/reel/DHoHvppCUJg/?utm_source=ig_embed&amp;utm_campaign=loading",
             },
             {
                 id: 22,
-                title: "Social Media Project 1",
-                description: "Viral video voice over",
+                title: "Tech Shift Summit 2025",
                 package: "package3",
                 videoUrl: "https://www.instagram.com/reel/DF8FHqbC9vy/?utm_source=ig_embed&amp;utm_campaign=loading",
             },
             {
                 id: 23,
-                title: "Social Media Project 1",
-                description: "Viral video voice over",
+                title: "Egypt Cheese Festival",
                 package: "package3",
                 videoUrl: "https://www.instagram.com/reel/DDXk3doOsrp/?utm_source=ig_embed&amp;utm_campaign=loading",
             },
@@ -239,122 +222,105 @@ const Projects = () => {
         package2: [
             {
                 id: 7,
-                title: "Educational Project 1",
-                description: "Voice narration for online course",
+                title: "Ministry of Youth Radio Campagin 2025",
                 package: "package2",
                 audioUrl: "/audio/1-Ministry-of-Youth - RadioCampaign 2025.mp3",
             },
             {
                 id: 8,
-                title: "Social Media Project 1",
-                description: "Viral video voice over",
-                package: "package3",
+                title: "Remas Land Ramadan 2025",
+                package: "package2",
                 audioUrl: "/audio/2-Remas Land - Ramadan 2025 Ad.mp3",
             },
             {
                 id: 9,
-                title: "Educational Project 1",
-                description: "Voice narration for online course",
+                title: "Elbehairy Paints 2025",
                 package: "package2",
                 audioUrl: "/audio/3-El Behairy Paints - 2025 Campaign.mp3",
             },
             {
                 id: 10,
-                title: "Social Media Project 1",
-                description: "Viral video voice over",
-                package: "package3",
+                title: "Business Ya Shabab 2025",
+                package: "package2",
                 audioUrl: "/audio/4-Business Ya Shabab - 2025 Conference Ad.mp3",
             },
             {
                 id: 11,
-                title: "Educational Project 1",
-                description: "Voice narration for online course",
+                title: "Vemto Paints",
                 package: "package2",
                 audioUrl: "/audio/5-Vemto Paints -Commercial.mp3",
             },
             {
                 id: 12,
-                title: "Social Media Project 1",
-                description: "Viral video voice over",
-                package: "package3",
+                title: "Leona Pet Insurance",
+                package: "package2",
                 audioUrl: "/audio/6-Leona Pet Insurance - Comic Sketch.mp3",
             },
             {
                 id: 13,
-                title: "Educational Project 1",
-                description: "Voice narration for online course",
+                title: "Sofimer Med",
                 package: "package2",
                 audioUrl: "/audio/7-Sofimer Med - Commercial 2025.mp3",
             },
             {
                 id: 14,
-                title: "Social Media Project 1",
-                description: "Viral video voice over",
-                package: "package3",
+                title: "Si Perfume",
+                package: "package2",
                 audioUrl: "/audio/8-SI Perfume - Social Media Ad 2024.mp3",
             },
             {
                 id: 15,
-                title: "Educational Project 1",
-                description: "Voice narration for online course",
+                title: "Royal Oud",
                 package: "package2",
                 audioUrl: "/audio/9-Royal Oud - Arabic Voiceover Spot.mp3",
             },
             {
                 id: 16,
-                title: "Social Media Project 1",
-                description: "Viral video voice over",
-                package: "package3",
+                title: "Pure Perfume",
+                package: "package2",
                 audioUrl: "/audio/10-Pure Perfume - Podcast Ad.mp3",
             },
             {
                 id: 17,
-                title: "Educational Project 1",
-                description: "Voice narration for online course",
+                title: "Story Post Episode",
                 package: "package2",
                 audioUrl: "/audio/11-StoryPost Episode - Storytelling.mp3",
             },
             {
                 id: 18,
-                title: "Social Media Project 1",
-                description: "Viral video voice over",
-                package: "package3",
+                title: "Ibn Tulun Mosque",
+                package: "package2",
                 audioUrl: "/audio/12-Ibn Tulun Mosque - Documentary VO.mp3",
             },
             {
                 id: 19,
-                title: "Educational Project 1",
-                description: "Voice narration for online course",
+                title: "Makanak Stores - Brand Teaser",
                 package: "package2",
                 audioUrl: "/audio/13-Makanak Stores - Brand Teaser.mp3",
             },
             {
                 id: 20,
-                title: "Social Media Project 1",
-                description: "Viral video voice over",
-                package: "package3",
+                title: "Leona Insurance",
+                package: "package2",
                 audioUrl: "/audio/14-Leona Insurance - Pet Carnival Ad.mp3",
             },
         ],
         package3: [
             {
                 id: 21,
-                title: "Social Media Project 1",
-                description: "Viral video voice over",
+                title: "Lebaladna Mega Day",
                 package: "package3",
                 videoUrl: "https://www.instagram.com/reel/DHoHvppCUJg/?utm_source=ig_embed&amp;utm_campaign=loading",
             },
             {
                 id: 22,
-                title: "Social Media Project 1",
-                description: "Viral video voice over",
+                title: "Tech Shift Summit 2025",
                 package: "package3",
                 videoUrl: "https://www.instagram.com/reel/DF8FHqbC9vy/?utm_source=ig_embed&amp;utm_campaign=loading",
             },
             {
                 id: 23,
-                title: "Social Media Project 1",
-                description: "Viral video voice over",
+                title: "Egypt Cheese Festival",
                 package: "package3",
                 videoUrl: "https://www.instagram.com/reel/DDXk3doOsrp/?utm_source=ig_embed&amp;utm_campaign=loading",
             },
@@ -426,24 +392,24 @@ const Projects = () => {
                     ))}
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
                     {filteredProjects.map((project, index) => (
                         <motion.div
                             key={project.id}
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all"
+                            className="bg-transparent"
                         >
-                            <div className="p-6">
+                            <div className="p-1">
                                 {project.videoUrl ? (
-                                    <div className="w-full aspect-video mb-4 rounded-xl shadow-lg">
+                                    <div className="w-full aspect-video rounded-xl shadow-lg">
                                         {project.videoUrl.includes("instagram.com/reel") ? (
                                             <div className="w-full flex justify-center">
                                                 <blockquote
                                                     className="instagram-media"
                                                     data-instgrm-permalink={project.videoUrl.split("?")[0]}
                                                     data-instgrm-version="14"
-                                                    style={{ width: "100%", background: "#FFF", border: 0, margin: 0, padding: 0 }}
+                                                    style={{ width: "100%", background: "#FFF", border: 0, margin: 2, padding: 2 }}
                                                 >
                                                 </blockquote>
                                             </div>
@@ -502,13 +468,13 @@ const Projects = () => {
                                                 voice over
                                             </span>
                                         </>
-                                    ) : project.package === "package2" ? (
-                                        <span className="inline-block px-3 py-1 text-sm rounded-full bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200">
-                                            Educational
-                                        </span>
-                                    ) : (
+                                    ) : project.package === "package3" ? (
                                         <span className="inline-block px-3 py-1 text-sm rounded-full bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200">
                                             Social Media
+                                        </span>
+                                    ) : (
+                                        <span className="">
+                                            
                                         </span>
                                     )}
                                 </div>

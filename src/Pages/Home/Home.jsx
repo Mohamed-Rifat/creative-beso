@@ -40,7 +40,8 @@ import brand24 from './../../assets/BrandIcons/brandIcon24.png';
 import brand25 from './../../assets/BrandIcons/brandIcon25.png';
 import brand26 from './../../assets/BrandIcons/brandIcon26.png';
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
-import { FaBullhorn, FaBookOpen, FaPlayCircle, FaHeadphones, FaPodcast, FaGamepad } from 'react-icons/fa';
+import { FaPenAlt, FaVideo, FaMicrophone, FaRobot, FaImages} from 'react-icons/fa';
+import { GiSpeaker} from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 const imagesh = [banner1h, banner2h, banner3h, banner4h];
 const imagesv = [banner1v, banner2v, banner3v, banner4v];
@@ -161,36 +162,30 @@ const TestimonialCard = ({ testimonial }) => {
   );
 };
 const voiceServices = [
-  {
-    title: "Commercial Ads",
-    description: "An influential and attractive voice that expresses your brand identity and delivers your message clearly.",
-    icon: <FaBullhorn className="text-3xl text-purple-500" />
-  },
-  {
-    title: "Educational Content",
-    description: "Clear and comfortable recordings that facilitate learning and capture students' attention.",
-    icon: <FaBookOpen className="text-3xl text-blue-500" />
-  },
-  {
-    title: "Social Media Clips",
-    description: "A lively and renewed voice that keeps up with short content trends and attracts viewers.",
-    icon: <FaPlayCircle className="text-3xl text-pink-500" />
-  },
-  {
-    title: "Audiobooks & Narration",
-    description: "Expressive storytelling with perfect pacing and emotional depth for immersive listening experiences.",
-    icon: <FaHeadphones className="text-3xl text-indigo-500" />
-  },
-  {
-    title: "Podcasts & Radio",
-    description: "Professional voice talent for podcast intros, outros, and radio commercials with broadcast quality.",
-    icon: <FaPodcast className="text-3xl text-green-500" />
-  },
-  {
-    title: "Video Games & Animation",
-    description: "Character voices and narration with range and personality to bring digital worlds to life.",
-    icon: <FaGamepad className="text-3xl text-yellow-500" />
-  }]
+ {
+       title: "Creative Copywriting",
+       icon: <FaPenAlt className="text-3xl text-blue-500" />,
+     },
+     {
+       title: "Creative Reels",
+       icon: <FaVideo className="text-3xl text-purple-500" />,
+     },
+     {
+       title: "Event Hosting",
+       icon: <GiSpeaker className="text-3xl text-red-500" />,
+     },
+     {
+       title: "Voice Over",
+       icon: <FaMicrophone className="text-3xl text-green-500" />,
+     },
+     {
+       title: "AI Creation",
+       icon: <FaRobot className="text-3xl text-yellow-500" />,
+     },
+     {
+       title: "Presentation & Storyboard",
+       icon: <FaImages className="text-3xl text-indigo-500" />,
+     }]
 export default function Home() {
   const [currentImage, setCurrentImage] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -483,7 +478,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="text-4xl md:text-5xl font-bold mb-6 dark:text-white"
             >
-              Professional <span className="text-purple-600 dark:text-purple-400">Voice Services</span>
+              Professional <span className="text-purple-600 dark:text-purple-400"> Services</span>
             </motion.h2>
             <motion.div
               initial={{ scaleX: 0 }}
@@ -501,20 +496,22 @@ export default function Home() {
             </motion.p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 lg:mx-32">
+          <div className="grid grid-cols-3 lg:grid-cols-6 gap-1">
             {voiceServices.map((service, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="group bg-white dark:bg-gray-800 rounded-md p-8 shadow-lg border border-gray-200 dark:border-gray-700 duration-300"
+                className="group bg-transparent"
               >
-                <div className="w-16 h-16 rounded-full bg-purple-50 dark:bg-gray-700 flex items-center justify-center mb-6 group-hover:bg-white dark:group-hover:bg-gray-600 transition-colors">
+                <div className='flex items-center justify-center flex-col'>
+                <div className="w-16 h-16 rounded-full bg-purple-50 dark:bg-gray-700 flex items-center justify-center mb-4">
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-3">{service.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300">{service.description}</p>
+                </div>
+               
               </motion.div>
             ))}
           </div>
