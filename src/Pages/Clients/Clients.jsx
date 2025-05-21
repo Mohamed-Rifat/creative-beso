@@ -18,6 +18,7 @@ import brand17 from './../../assets/BrandIcons/brandIcon17.png';
 import brand18 from './../../assets/BrandIcons/brandIcon18.png';
 import brand19 from './../../assets/BrandIcons/brandIcon19.png';
 import brand20 from './../../assets/BrandIcons/brandIcon20.png';
+import brand21 from './../../assets/BrandIcons/brandIcon21.png';
 import brand22 from './../../assets/BrandIcons/brandIcon22.png';
 import brand23 from './../../assets/BrandIcons/brandIcon23.png';
 import brand24 from './../../assets/BrandIcons/brandIcon24.png';
@@ -27,35 +28,14 @@ import { FiArrowRight } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
 const ClientsPage = () => {
-    const brandCategories = [
-        {
-            title: "Media & Broadcasting",
-            brands: [brand1, brand2, brand3, brand4, brand5]
-        },
-        {
-            title: "Technology Partners",
-            brands: [brand6, brand7, brand8, brand9, brand10]
-        },
-        {
-            title: "Consumer Brands",
-            brands: [brand11, brand12, brand13, brand14, brand15]
-        },
-        {
-            title: "Advertising Agencies",
-            brands: [brand16, brand17, brand18, brand19, brand20]
-        },
-        {
-            title: "Publishing & Education",
-            brands: [brand22, brand23, brand24]
-        },
-        {
-            title: "Entertainment",
-            brands: [brand25, brand26]
-        }
+    const brands = [
+        brand1, brand2, brand3, brand4, brand5, brand6, brand7, brand8, brand9,
+        brand10, brand11, brand12, brand13, brand14, brand15, brand16, brand17,
+        brand18, brand19, brand20, brand21, brand22, brand23, brand24, brand25, brand26
     ];
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-950 py-20 px-4">
+        <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-600 dark:to-gray-800 py-20 px-4">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
@@ -67,46 +47,33 @@ const ClientsPage = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 lg:mx-32">
-                    {brandCategories.map((category, index) => (
-                        <div
-                            key={index}
-                            className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow duration-300"
-                        >
-                            <div className="flex items-center mb-6">
-                                <span className="w-3 h-3 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
-                                <h2 className="text-xl font-bold text-gray-800 dark:text-white truncate">
-                                    {category.title}
-                                </h2>
+                <div className="container mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
+                    <div className="bg-transparent rounded grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-9 gap-x-1 gap-y-2 place-items-center">
+                        {brands.map((brand, index) => (
+                            <div
+                                key={index}
+                                className="aspect-square w-full max-w-[90px]  overflow-hidden flex items-center justify-center p-3 hover:shadow-xl hover:scale-150 hover:bg-gray-300 dark:hover:bg-slate-600 hover:rounded-lg transition-all duration-300"
+                            >
+                                <img
+                                    src={brand}
+                                    alt={`Brand ${index + 1}`}
+                                    className="w-full h-full object-contain"
+                                    loading="lazy"
+                                    onError={(e) => {
+                                        e.currentTarget.src = '/fallback-brand.png';
+                                        e.currentTarget.className = 'w-full h-full object-cover p-3 opacity-70';
+                                    }}
+                                />
                             </div>
-
-                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                                {category.brands.map((brand, brandIndex) => (
-                                    <div
-                                        key={brandIndex}
-                                        className="relative group aspect-square bg-gray-50 dark:bg-gray-700 rounded-md overflow-hidden transition-all duration-300 hover:scale-[1.02]"
-                                    >
-                                        <img
-                                            src={brand}
-                                            alt={`${category.title} brand ${brandIndex + 1}`}
-                                            className="w-full h-full object-contain p-3"
-                                            loading="lazy"
-                                            onError={(e) => {
-                                                e.currentTarget.src = '/fallback-brand.png';
-                                                e.currentTarget.className = 'w-full h-full object-cover p-3 opacity-70';
-                                            }}
-                                        />
-                                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
 
                 <div className="text-center mt-20">
-                    <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">Ready to join our esteemed clientele?</h3>
-                    <Link to='/contact'>
+                    <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">
+                        Ready to join our esteemed clientele?
+                    </h3>
+                    <Link to="/contact">
                         <button className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold hover:shadow-lg transition-all">
                             Start Your Project
                             <FiArrowRight className="ml-2" />
