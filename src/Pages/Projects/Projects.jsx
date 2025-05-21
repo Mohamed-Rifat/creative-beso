@@ -55,7 +55,7 @@ const Projects = () => {
                 title: "TV production - sofimer",
                 description: "Professional voice over for a major brand campaign",
                 package: "package1",
-                videoUrl: "https://drive.google.com/file/d/1AL4ycbJYQXLWjgc8-YxChSAiqOnCMl5s/preview",
+                videoUrl: "https://drive.google.com/file/d/1kaG7Qwwr3tGvDrpaRNnMMpLgDDwXLrOK/preview",
             }
             ,
             {
@@ -154,7 +154,7 @@ const Projects = () => {
                 id: 21,
                 title: "Lebaladna Mega Day",
                 package: "package3",
-                videoUrl: "https://www.instagram.com/reel/DHoHvppCUJg/?utm_source=ig_embed&amp;utm_campaign=loading",
+                videoUrl: "https://www.instagram.com/reel/DJSD7VECkBA/?utm_source=ig_embed&amp;utm_campaign=loading",
             },
             {
                 id: 22,
@@ -207,7 +207,7 @@ const Projects = () => {
                 title: "TV production - sofimer",
                 description: "Professional voice over for a major brand campaign",
                 package: "package1",
-                videoUrl: "https://drive.google.com/file/d/1AL4ycbJYQXLWjgc8-YxChSAiqOnCMl5s/preview",
+                videoUrl: "https://drive.google.com/file/d/1kaG7Qwwr3tGvDrpaRNnMMpLgDDwXLrOK/preview",
             }
             ,
             {
@@ -310,7 +310,7 @@ const Projects = () => {
                 id: 21,
                 title: "Lebaladna Mega Day",
                 package: "package3",
-                videoUrl: "https://www.instagram.com/reel/DHoHvppCUJg/?utm_source=ig_embed&amp;utm_campaign=loading",
+                videoUrl: "https://www.instagram.com/reel/DJSD7VECkBA/?utm_source=ig_embed&amp;utm_campaign=loading",
             },
             {
                 id: 22,
