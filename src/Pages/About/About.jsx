@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import banner from './../../assets/basem cover.jpg'
 const AboutMe = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-100 dark:from-gray-900 dark:to-gray-950 text-gray-800 dark:text-gray-100 transition-colors duration-500">
-      <div className="relative h-[30rem] w-full">
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-100 dark:from-gray-900 dark:to-gray-950 text-gray-800 dark:text-gray-100 transition-colors duration-500 ">
+      <div className="relative h-[30rem] w-full container mx-auto max-w-7xl">
         <img src={banner} alt="Basem Raafat Cover" className="w-full h-full "/>
         <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center px-4">
           <h1 className="text-4xl md:text-6xl font-extrabold text-white drop-shadow-lg">Basem Raafat</h1>
@@ -16,7 +16,7 @@ const AboutMe = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-14"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-14"
       >
         <section className="border-l-4 border-blue-500 pl-4">
           <h2 className="text-2xl font-bold mb-3">🎓 The Foundation</h2>

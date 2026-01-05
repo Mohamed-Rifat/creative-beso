@@ -1,175 +1,222 @@
-import React, { useEffect, useState } from 'react'
-import './Navbar.css'
-import LogoLight from './../../assets/LogoLight.png'
-import LogoDark from './../../assets/LogoDark.png'
-import { NavLink, Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useEffect, useState, useRef, useCallback } from "react";
+import "./Navbar.css";
+import LogoLight from "./../../assets/LogoLight.png";
+import LogoDark from "./../../assets/LogoDark.png";
+import { NavLink, Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
-    const [darkMode, setDarkMode] = useState(() => {
-        return localStorage.getItem("darkMode") === 'true';
-    });
+  const [darkMode, setDarkMode] = useState(
+    () => localStorage.getItem("darkMode") === "true"
+  );
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-    const [activeLink, setActiveLink] = useState('home');
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const menuRef = useRef(null);
+  const buttonRef = useRef(null);
 
-    const toggleDarkMode = () => {
-        setDarkMode(prevMode => !prevMode);
-    };
+  const toggleDarkMode = useCallback(() => {
+    setDarkMode((prev) => !prev);
+  }, []);
 
-    const toggleMobileMenu = () => {
-        setMobileMenuOpen(!mobileMenuOpen);
-    };
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen((prev) => !prev);
+  };
 
-    const handleLinkClick = (link) => {
-        setActiveLink(link);
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
+
+  const navLinks = [
+    { id: "", label: "Home" },
+    { id: "about", label: "About Me" },
+    { id: "projects", label: "My Projects" },
+    { id: "clients", label: "Clients" },
+    { id: "services", label: "Services" },
+    { id: "contact", label: "Contact Us" },
+  ];
+
+  useEffect(() => {
+    const onScroll = () => setIsScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", darkMode);
+    localStorage.setItem("darkMode", darkMode);
+  }, [darkMode]);
+
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? "hidden" : "unset";
+    return () => (document.body.style.overflow = "unset");
+  }, [mobileMenuOpen]);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        mobileMenuOpen &&
+        menuRef.current &&
+        !menuRef.current.contains(e.target) &&
+        !buttonRef.current.contains(e.target)
+      ) {
         setMobileMenuOpen(false);
+      }
     };
 
-    useEffect(() => {
-        if (darkMode) {
-            document.documentElement.classList.add("dark");
-            localStorage.setItem("darkMode", "true");
-        } else {
-            document.documentElement.classList.remove("dark");
-            localStorage.setItem("darkMode", "false");
-        }
-    }, [darkMode]);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [mobileMenuOpen]);
 
-    const navLinks = [
-        { id: '', label: 'Home' },
-        { id: 'about', label: 'About Me' },
-        { id: 'projects', label: 'My Projects' },
-        { id: 'clients', label: 'Clients' },
-        { id: 'services', label: 'Services' },
-        { id: 'contact', label: 'Contact Us' }
-    ];
+  return (
+    <>
+      <motion.nav
+        initial={{ y: -80, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ type: "spring", stiffness: 120, damping: 18 }}
+        className={`fixed top-0 w-full z-50 backdrop-blur transition-all ${
+          isScrolled
+            ? "bg-white/90 dark:bg-[#121929]/90 shadow-sm border-b border-gray-200/60 dark:border-gray-700/60"
+            : "bg-white dark:bg-[#121929]"
+        }`}
+      >
+        <div className="max-w-screen-xl mx-auto px-4 h-16 flex items-center justify-between">
+          <Link to="/" className="flex items-center">
+            <img src={LogoLight} className="w-12 dark:hidden" />
+            <img src={LogoDark} className="w-12 hidden dark:block" />
+          </Link>
 
-    return (
-        <>
-            <nav className="fixed w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 z-50">
-                <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4">
-                    <div className="flex items-center">
-                        <Link to='/'>
-                            <img src={LogoLight} alt="Logo" className="w-16 h-16 dark:hidden" />
-                            <img src={LogoDark} alt="Logo" className="w-16 h-16 hidden dark:block" />
-                        </Link>
-                    </div>
+          <ul className="hidden md:flex items-center gap-6 relative">
+            {navLinks.map((link) => (
+              <NavLink
+                key={link.id}
+                to={`/${link.id}`}
+                className="relative px-1 py-2 text-sm font-semibold text-gray-900 dark:text-gray-100 hover:text-blue-600 transition-colors"
+              >
+                {({ isActive }) => (
+                  <>
+                    <span className="relative z-10">{link.label}</span>
 
-                    <div className="flex items-center md:order-2 space-x-4">
-                        <label className="theme-switch">
-                            <input type="checkbox" name="theme"
-                                id="theme-switch" className="theme-switch__checkbox" checked={darkMode} onChange={toggleDarkMode} />
-                            <div className="theme-switch__container">
-                                <label className="theme-switch ml-4">
-                                    <input type="checkbox" name="theme"
-                                        className="theme-switch__checkbox" checked={darkMode} onChange={toggleDarkMode} />
-                                    <div className="theme-switch__container">
-                                        <div className="theme-switch__clouds" />
-                                        <div className="theme-switch__stars-container">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55" fill="none">
-                                                <path fillRule="evenodd" clipRule="evenodd" d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 36.3545ZM101.831 49.0069C101.055 49.8503 100.111 50.2995 99 50.3545C100.111 50.4095 101.055 50.8587 101.831 51.7112C102.607 52.5546 102.996 53.563 102.996 54.7273C102.996 53.9572 103.172 53.2513 103.525 52.5913C103.886 51.9312 104.372 51.3995 104.98 51.0053C105.598 50.602 106.268 50.3911 107 50.3545C105.88 50.2903 104.936 49.8503 104.16 49.0069C103.384 48.1635 102.996 47.1642 102.996 46C102.996 47.1642 102.607 48.1635 101.831 49.0069Z" fill="currentColor" />
-                                            </svg>
-                                        </div>
-                                        <div className="theme-switch__circle-container">
-                                            <div className="theme-switch__sun-moon-container">
-                                                <div className="theme-switch__moon">
-                                                    <div className="theme-switch__spot" />
-                                                    <div className="theme-switch__spot" />
-                                                    <div className="theme-switch__spot" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-
-                            </div>
-                        </label>
-
-                        <button
-                            onClick={toggleMobileMenu}
-                            type="button"
-                            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                            aria-controls="mobile-menu"
-                            aria-expanded={mobileMenuOpen}
-                        >
-                            <span className="sr-only">Open main menu</span>
-                            {mobileMenuOpen ? (
-                                <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            ) : (
-                                <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-                                </svg>
-                            )}
-                        </button>
-                    </div>
-
-                    <div className="hidden md:flex md:items-center md:space-x-4 md:w-auto">
-                        <ul className="flex font-medium p-0 space-x-6 rtl:space-x-reverse">
-                            {navLinks.map((link) => (
-                                <li key={link.id}>
-                                    <NavLink
-                                        to={`/${link.id}`}
-                                        className={({ isActive }) => `
-                        relative block py-2 px-3 rounded-sm md:border-0 md:p-0 dark:text-white transition-colors duration-300
-                        ${isActive ? 'text-blue-700 dark:text-blue-500' : 'text-gray-800 hover:text-blue-700 dark:hover:text-blue-500'}
-                    `}
-                                        onClick={() => handleLinkClick(link.id)}
-                                    >
-                                        {({ isActive }) => (
-                                            <>
-                                                {link.label}
-                                                <span className={`
-                                absolute left-0 bottom-0 w-full h-0.5 bg-blue-700 dark:bg-blue-500
-                                transform origin-left transition-transform duration-300
-                                ${isActive ? 'scale-x-100' : 'scale-x-0'}
-                            `}></span>
-                                            </>
-                                        )}
-                                    </NavLink>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-
-                <AnimatePresence>
-                    {mobileMenuOpen && (
-                        <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.3, ease: "easeInOut" }}
-                            className="md:hidden w-full overflow-hidden"
-                            id="mobile-menu"
-                        >
-                            <div className="px-4 pt-2 pb-4 space-y-1 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
-                                {navLinks.map((link) => (
-                                    <motion.div
-                                        key={link.id}
-                                        initial={{ opacity: 0, x: -20 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        transition={{ duration: 0.2 }}
-                                    >
-                                        <NavLink
-                                            to={`/${link.id}`}
-                                            className={({ isActive }) =>
-                                                `block py-3 px-3 rounded-md text-base font-medium transition-colors duration-200
-                                                ${isActive ? 'bg-blue-50 text-blue-700 dark:bg-gray-700 dark:text-blue-500' : 'text-gray-700 hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700'}`
-                                            }
-                                            onClick={() => handleLinkClick(link.id)}
-                                        >
-                                            {link.label}
-                                        </NavLink>
-                                    </motion.div>
-                                ))}
-                            </div>
-                        </motion.div>
+                    {isActive && (
+                      <motion.span
+                        layoutId="navbar-underline"
+                        className="absolute -bottom-1 left-0 w-full h-[2px] bg-blue-600 dark:bg-blue-400 rounded-full"
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 30,
+                        }}
+                      />
                     )}
-                </AnimatePresence>
-            </nav>
-        </>
-    )
+                  </>
+                )}
+              </NavLink>
+            ))}
+          </ul>
+
+          <div className="flex items-center gap-3">
+            <label className="theme-switch">
+              <input
+                type="checkbox"
+                className="theme-switch__checkbox sr-only"
+                checked={darkMode}
+                onChange={toggleDarkMode}
+              />
+              <div className="theme-switch__container">
+                <label className="theme-switch">
+                  <input
+                    type="checkbox"
+                    className="theme-switch__checkbox sr-only"
+                    checked={darkMode}
+                    onChange={toggleDarkMode}
+                  />
+                  <div className="theme-switch__container">
+                    <div className="theme-switch__clouds" />
+                    <div className="theme-switch__stars-container" />
+                    <div className="theme-switch__circle-container">
+                      <div className="theme-switch__sun-moon-container">
+                        <div className="theme-switch__moon">
+                          <div className="theme-switch__spot" />
+                          <div className="theme-switch__spot" />
+                          <div className="theme-switch__spot" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </label>
+
+            <motion.button
+              ref={buttonRef}
+              onClick={toggleMobileMenu}
+              className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-lg text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+              whileTap={{ scale: 0.9 }}
+            >
+              <span className="sr-only">Toggle menu</span>
+
+              <motion.span
+                className="absolute w-6 h-[2px] bg-current rounded-full"
+                animate={{
+                  rotate: mobileMenuOpen ? 45 : 0,
+                  y: mobileMenuOpen ? 0 : -6,
+                }}
+                transition={{ duration: 0.25 }}
+              />
+
+              <motion.span
+                className="absolute w-6 h-[2px] bg-current rounded-full"
+                animate={{ opacity: mobileMenuOpen ? 0 : 1 }}
+                transition={{ duration: 0.2 }}
+              />
+
+              <motion.span
+                className="absolute w-6 h-[2px] bg-current rounded-full"
+                animate={{
+                  rotate: mobileMenuOpen ? -45 : 0,
+                  y: mobileMenuOpen ? 0 : 6,
+                }}
+                transition={{ duration: 0.25 }}
+              />
+            </motion.button>
+          </div>
+        </div>
+
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <motion.div
+              ref={menuRef}
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.35, ease: "easeInOut" }}
+              className="md:hidden bg-white/95 dark:bg-[#121929]/95 backdrop-blur border-t border-gray-200/60 dark:border-gray-700/60"
+            >
+              <ul className="px-4 py-6 space-y-2">
+                {navLinks.map((link) => (
+                  <NavLink
+                    key={link.id}
+                    to={`/${link.id}`}
+                    onClick={closeMobileMenu}
+                    className={({ isActive }) =>
+                      `block px-4 py-3 rounded-xl text-base font-medium transition
+                      ${
+                        isActive
+                          ? "bg-blue-500/10 text-blue-600 dark:text-blue-400 font-semibold"
+                          : "text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800"
+                      }`
+                    }
+                  >
+                    {link.label}
+                  </NavLink>
+                ))}
+              </ul>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.nav>
+
+      <div className="h-16" />
+    </>
+  );
 }
