@@ -39,34 +39,16 @@ const Projects = () => {
                 videoUrl: "https://youtu.be/Z3yoMz_czVQ?si=VwN-vJmcBydr5Rxx",
             },
             {
-                id: 27,
-                title: "AI Project 4",
+                id: 35,
+                title: "AI Project 12",
                 package: "package4",
-                videoUrl: "https://drive.google.com/file/d/1rFhUlMiPH1CGtq9g3AKqItpYCOFkrhri/preview",
-            },
+                videoUrl: "https://drive.google.com/file/d/1riJ0lNQIVNhhG-2ch6LeI1Ap9ygNN6de/view?usp=sharing",
+            }, 
             {
-                id: 28,
-                title: "AI Project 5",
+                id: 38,
+                title: "AI Project 15",
                 package: "package4",
-                videoUrl: "https://drive.google.com/file/d/1SRoxp-9-7zOwwao7MZ776seKz-7QYg-9/view?usp=sharing",
-            },
-            {
-                id: 29,
-                title: "AI Project 6",
-                package: "package4",
-                videoUrl: "https://drive.google.com/file/d/1rFhUlMiPH1CGtq9g3AKqItpYCOFkrhri/view?usp=sharing",
-            },
-            {
-                id: 30,
-                title: "AI Project 7",
-                package: "package4",
-                videoUrl: "https://drive.google.com/file/d/19bxHar1Rc-5nyf2URWPYI_T9pRZiOIHi/view?usp=sharing",
-            },
-            {
-                id: 31,
-                title: "AI Project 8",
-                package: "package4",
-                videoUrl: "https://drive.google.com/file/d/1p_UyFy0c3aexchq0Srx1dyQ_aIGc8OdP/view?usp=sharing",
+                videoUrl: " https://drive.google.com/file/d/1bLHsi9UAKp_hkSAfzYYPU07MYNdRghve/view?usp=sharing",
             },
             {
                 id: 32,
@@ -75,23 +57,31 @@ const Projects = () => {
                 videoUrl: "https://drive.google.com/file/d/1tkmpNcdZ4j2iMwvsmR9tSsbe8b0BoN-e/view?usp=sharing",
             },
             {
-                id: 33,
-                title: "AI Project 10",
-                package: "package4",
-                videoUrl: "https://drive.google.com/file/d/1ajeUG5jobr2Mup-0t74UZfAE3sGK3YV4/view?usp=sharing",
-            },
-            {
                 id: 34,
                 title: "AI Project 11",
                 package: "package4",
                 videoUrl: "https://drive.google.com/file/d/17nBPybfM5jL-XDsEFMiklyLmePmMDdaV/view?usp=sharing",
             },
             {
-                id: 35,
-                title: "AI Project 12",
+                id: 27,
+                title: "AI Project 4",
                 package: "package4",
-                videoUrl: "https://drive.google.com/file/d/1riJ0lNQIVNhhG-2ch6LeI1Ap9ygNN6de/view?usp=sharing",
+                videoUrl: "https://drive.google.com/file/d/1rFhUlMiPH1CGtq9g3AKqItpYCOFkrhri/preview",
             },
+            {
+                id: 31,
+                title: "AI Project 8",
+                package: "package4",
+                videoUrl: "https://drive.google.com/file/d/1p_UyFy0c3aexchq0Srx1dyQ_aIGc8OdP/view?usp=sharing",
+            },
+
+            {
+                id: 33,
+                title: "AI Project 10",
+                package: "package4",
+                videoUrl: "https://drive.google.com/file/d/1ajeUG5jobr2Mup-0t74UZfAE3sGK3YV4/view?usp=sharing",
+            },
+
             {
                 id: 36,
                 title: "AI Project 13",
@@ -104,17 +94,24 @@ const Projects = () => {
                 package: "package4",
                 videoUrl: " https://drive.google.com/file/d/1MDHIoHltFohCxvaOx0m1Rvz2-JKIJxIZ/view?usp=sharing",
             },
-            {
-                id: 38,
-                title: "AI Project 15",
-                package: "package4",
-                videoUrl: " https://drive.google.com/file/d/1bLHsi9UAKp_hkSAfzYYPU07MYNdRghve/view?usp=sharing",
-            },
+
             {
                 id: 38,
                 title: "AI Project 16",
                 package: "package4",
                 videoUrl: "https://drive.google.com/file/d/1CjJjaiL00KS0ICvRA8F6i1PecqoXrsNR/view?usp=sharing",
+            },
+            {
+                id: 28,
+                title: "AI Project 5",
+                package: "package4",
+                videoUrl: "https://drive.google.com/file/d/1SRoxp-9-7zOwwao7MZ776seKz-7QYg-9/view?usp=sharing",
+            },
+            {
+                id: 30,
+                title: "AI Project 7",
+                package: "package4",
+                videoUrl: "https://drive.google.com/file/d/19bxHar1Rc-5nyf2URWPYI_T9pRZiOIHi/view?usp=sharing",
             },
             {
                 id: 7,
@@ -431,34 +428,16 @@ const Projects = () => {
                 videoUrl: "https://youtu.be/Z3yoMz_czVQ?si=VwN-vJmcBydr5Rxx",
             },
             {
-                id: 27,
-                title: "AI Project 4",
+                id: 35,
+                title: "AI Project 12",
                 package: "package4",
-                videoUrl: "https://drive.google.com/file/d/1rFhUlMiPH1CGtq9g3AKqItpYCOFkrhri/preview",
-            },
+                videoUrl: "https://drive.google.com/file/d/1riJ0lNQIVNhhG-2ch6LeI1Ap9ygNN6de/view?usp=sharing",
+            }, 
             {
-                id: 28,
-                title: "AI Project 5",
+                id: 38,
+                title: "AI Project 15",
                 package: "package4",
-                videoUrl: "https://drive.google.com/file/d/1SRoxp-9-7zOwwao7MZ776seKz-7QYg-9/view?usp=sharing",
-            },
-            {
-                id: 29,
-                title: "AI Project 6",
-                package: "package4",
-                videoUrl: "https://drive.google.com/file/d/1rFhUlMiPH1CGtq9g3AKqItpYCOFkrhri/view?usp=sharing",
-            },
-            {
-                id: 30,
-                title: "AI Project 7",
-                package: "package4",
-                videoUrl: "https://drive.google.com/file/d/19bxHar1Rc-5nyf2URWPYI_T9pRZiOIHi/view?usp=sharing",
-            },
-            {
-                id: 31,
-                title: "AI Project 8",
-                package: "package4",
-                videoUrl: "https://drive.google.com/file/d/1p_UyFy0c3aexchq0Srx1dyQ_aIGc8OdP/view?usp=sharing",
+                videoUrl: " https://drive.google.com/file/d/1bLHsi9UAKp_hkSAfzYYPU07MYNdRghve/view?usp=sharing",
             },
             {
                 id: 32,
@@ -467,23 +446,31 @@ const Projects = () => {
                 videoUrl: "https://drive.google.com/file/d/1tkmpNcdZ4j2iMwvsmR9tSsbe8b0BoN-e/view?usp=sharing",
             },
             {
-                id: 33,
-                title: "AI Project 10",
-                package: "package4",
-                videoUrl: "https://drive.google.com/file/d/1ajeUG5jobr2Mup-0t74UZfAE3sGK3YV4/view?usp=sharing",
-            },
-            {
                 id: 34,
                 title: "AI Project 11",
                 package: "package4",
                 videoUrl: "https://drive.google.com/file/d/17nBPybfM5jL-XDsEFMiklyLmePmMDdaV/view?usp=sharing",
             },
             {
-                id: 35,
-                title: "AI Project 12",
+                id: 27,
+                title: "AI Project 4",
                 package: "package4",
-                videoUrl: "https://drive.google.com/file/d/1riJ0lNQIVNhhG-2ch6LeI1Ap9ygNN6de/view?usp=sharing",
+                videoUrl: "https://drive.google.com/file/d/1rFhUlMiPH1CGtq9g3AKqItpYCOFkrhri/preview",
             },
+            {
+                id: 31,
+                title: "AI Project 8",
+                package: "package4",
+                videoUrl: "https://drive.google.com/file/d/1p_UyFy0c3aexchq0Srx1dyQ_aIGc8OdP/view?usp=sharing",
+            },
+
+            {
+                id: 33,
+                title: "AI Project 10",
+                package: "package4",
+                videoUrl: "https://drive.google.com/file/d/1ajeUG5jobr2Mup-0t74UZfAE3sGK3YV4/view?usp=sharing",
+            },
+
             {
                 id: 36,
                 title: "AI Project 13",
@@ -496,17 +483,24 @@ const Projects = () => {
                 package: "package4",
                 videoUrl: " https://drive.google.com/file/d/1MDHIoHltFohCxvaOx0m1Rvz2-JKIJxIZ/view?usp=sharing",
             },
-            {
-                id: 38,
-                title: "AI Project 15",
-                package: "package4",
-                videoUrl: " https://drive.google.com/file/d/1bLHsi9UAKp_hkSAfzYYPU07MYNdRghve/view?usp=sharing",
-            },
+
             {
                 id: 38,
                 title: "AI Project 16",
                 package: "package4",
                 videoUrl: "https://drive.google.com/file/d/1CjJjaiL00KS0ICvRA8F6i1PecqoXrsNR/view?usp=sharing",
+            },
+            {
+                id: 28,
+                title: "AI Project 5",
+                package: "package4",
+                videoUrl: "https://drive.google.com/file/d/1SRoxp-9-7zOwwao7MZ776seKz-7QYg-9/view?usp=sharing",
+            },
+            {
+                id: 30,
+                title: "AI Project 7",
+                package: "package4",
+                videoUrl: "https://drive.google.com/file/d/19bxHar1Rc-5nyf2URWPYI_T9pRZiOIHi/view?usp=sharing",
             },
         ],
     };
