@@ -7,6 +7,13 @@ import brand12 from './../../assets/BrandIcons/brandIcon12.png';
 import brand17 from './../../assets/BrandIcons/brandIcon17.png';
 import brand18 from './../../assets/BrandIcons/brandIcon18.png';
 import brand22 from './../../assets/BrandIcons/brandIcon22.png';
+import brand27 from "./../../assets/BrandIcons/beyti.jpeg";
+import brand28 from "./../../assets/BrandIcons/Ebank.jpeg";
+import brand29 from "./../../assets/BrandIcons/oneToOne.jpeg";
+import brand30 from "./../../assets/BrandIcons/tgr.jpeg";
+import brand31 from "./../../assets/BrandIcons/degree18.jpeg";
+import brand32 from "./../../assets/BrandIcons/wunder.jpeg";
+import brand33 from "./../../assets/BrandIcons/scrunch.jpeg";
 
 const Clients = () => {
     const clients = [
@@ -16,7 +23,15 @@ const Clients = () => {
         { name: 'Ministry of Youth and Sports', logo: brand17 },
         { name: 'RemasLand', logo: brand18 },
         { name: 'TechShift', logo: brand22 },
+        { name: 'beyti', logo: brand27 },
+        { name: 'Ebank', logo: brand28 },
+        { name: 'oneToOne', logo: brand29 },
+        { name: 'tgr', logo: brand30 },
+        { name: 'degree18', logo: brand31 },
+        { name: 'wunder', logo: brand32 },
+        { name: 'scrunch', logo: brand33 },
     ];
+    const roundedClients = ["wunder", "scrunch", "beyti", "tgr"];
 
     return (
         <section className="relative w-full py-20 bg-slate-50 dark:bg-gray-900 overflow-hidden">
@@ -88,24 +103,28 @@ const Clients = () => {
                         }}
                         className="flex space-x-6 w-max py-4"
                     >
-                        {[...clients, ...clients].map((client, i) => (
-                            <motion.div
-                                key={`client-${i}`}
-                                className="flex items-center justify-center"
-                            >
-                                <div className="relative group">
-                                    <div className="w-44 h-44 rounded-full flex items-center justify-center p-2">
-                                        <img
-                                            src={client.logo}
-                                            alt={client.name}
-                                            className=" object-contain"
-                                            loading="lazy"
-                                            decoding="async"
-                                        />
+                        {[...clients, ...clients].map((client, i) => {
+                            const isRounded = roundedClients.includes(client.name);
+
+                            return (
+                                <motion.div key={`client-${i}`} className="flex items-center justify-center">
+                                    <div className="relative group">
+                                        <div
+                                            className={`w-44 h-44 flex items-center justify-center p-2 ${isRounded ? "rounded-full" : "rounded-xl"
+                                                }`}
+                                        >
+                                            <img
+                                                src={client.logo}
+                                                alt={client.name}
+                                                className={`object-contain ${isRounded ? "rounded-full" : ""
+                                                    }`}
+                                            />
+                                        </div>
                                     </div>
-                                </div>
-                            </motion.div>
-                        ))}
+                                </motion.div>
+                            );
+                        })}
+
                     </motion.div>
                 </div>
 

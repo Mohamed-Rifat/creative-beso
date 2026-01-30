@@ -2,7 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
-
+import brand27 from "./../../assets/BrandIcons/beyti.jpeg";
+import brand28 from "./../../assets/BrandIcons/Ebank.jpeg";
+import brand29 from "./../../assets/BrandIcons/oneToOne.jpeg";
+import brand30 from "./../../assets/BrandIcons/tgr.jpeg";
+import brand31 from "./../../assets/BrandIcons/degree18.jpeg";
+import brand32 from "./../../assets/BrandIcons/wunder.jpeg";
+import brand33 from "./../../assets/BrandIcons/scrunch.jpeg";
 import brand1 from "./../../assets/BrandIcons/brandIcon1.png";
 import brand2 from "./../../assets/BrandIcons/brandIcon2.png";
 import brand3 from "./../../assets/BrandIcons/brandIcon3.png";
@@ -32,6 +38,7 @@ import brand26 from "./../../assets/BrandIcons/brandIcon26.png";
 
 const ClientsPage = () => {
   const brands = [
+    brand27, brand28, brand29, brand30, brand31, brand32, brand33,
     brand1, brand2, brand3, brand4, brand5, brand6, brand7, brand8, brand9,
     brand10, brand11, brand12, brand13, brand14, brand15, brand16, brand17,
     brand18, brand19, brand20, brand21, brand22, brand23, brand24, brand25, brand26,
