@@ -5,10 +5,10 @@ import profile from './../../assets/profilePic.jpg';
 
 const ContactPage = () => {
   const contactInfo = {
-    phone: '+201127260087',
+    phone: '+201027256002',
     email: 'basem.raafat1999@gmail.com',
     social: {
-      whatsapp: 'https://wa.me/201127260087',
+      whatsapp: 'https://wa.me/201027256002',
       tiktok: 'https://www.tiktok.com/@basemraafat99?_t=ZS-8vPGvMZzbB1&_r=1',
       facebook: 'https://www.facebook.com/share/1ENwNUi38F/?mibextid=qi2Omg',
       youtube: 'https://www.youtube.com/@basemraafat99',

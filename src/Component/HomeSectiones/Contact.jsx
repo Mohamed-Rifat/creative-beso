@@ -10,7 +10,7 @@ const ModernContact = () => {
         {
             title: "WhatsApp",
             description: "Let's chat directly on WhatsApp for quick collaboration and project discussions",
-            href: "https://wa.me/201127260087",
+            href: "https://wa.me/201027256002",
             bg: "bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30",
             border: "border-emerald-200 dark:border-emerald-800",
             iconBg: "bg-gradient-to-br from-emerald-500 to-teal-600",
@@ -40,7 +40,7 @@ const ModernContact = () => {
         {
             title: "Phone",
             description: "Call me directly for immediate discussions and urgent project needs",
-            href: "tel:01127260087",
+            href: "tel:01027256002",
             bg: "bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30",
             border: "border-purple-200 dark:border-purple-800",
             iconBg: "bg-gradient-to-br from-purple-500 to-pink-600",
@@ -233,7 +233,7 @@ const ModernContact = () => {
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                onClick={() => copyToClipboardPhone("01127260087")}
+                                onClick={() => copyToClipboardPhone("01027256002")}
                                 className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2"
                             >
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
