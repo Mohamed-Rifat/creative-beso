@@ -22,31 +22,31 @@ const Projects = () => {
         all: [
             {
                 id: 24,
-                title: "AI Project 1",
+                title: "One to one show - Bayoumi Foaud",
                 package: "package4",
                 videoUrl: "https://youtu.be/zw7r416d_Vw?si=pVB0gePiAKOHWfpx",
             },
             {
                 id: 25,
-                title: "AI Project 2",
+                title: "One to one show - Yousra",
                 package: "package4",
                 videoUrl: "https://youtu.be/NaKb_4gnVhA?si=9ACMSbuiaKMSSf1G",
             },
             {
                 id: 26,
-                title: "AI Project 3",
+                title: "One to one show - Karim Fahmy",
                 package: "package4",
                 videoUrl: "https://youtu.be/Z3yoMz_czVQ?si=VwN-vJmcBydr5Rxx",
             },
             {
                 id: 35,
-                title: "AI Project 12",
+                title: "E-Bank Prouduction",
                 package: "package4",
                 videoUrl: "https://drive.google.com/file/d/1riJ0lNQIVNhhG-2ch6LeI1Ap9ygNN6de/view?usp=sharing",
             }, 
             {
                 id: 38,
-                title: "AI Project 15",
+                title: "ZORA - Ai Production",
                 package: "package4",
                 videoUrl: " https://drive.google.com/file/d/1bLHsi9UAKp_hkSAfzYYPU07MYNdRghve/view?usp=sharing",
             },
@@ -96,7 +96,7 @@ const Projects = () => {
             },
 
             {
-                id: 38,
+                id: 39,
                 title: "AI Project 16",
                 package: "package4",
                 videoUrl: "https://drive.google.com/file/d/1CjJjaiL00KS0ICvRA8F6i1PecqoXrsNR/view?usp=sharing",
@@ -411,31 +411,31 @@ const Projects = () => {
         package4: [
             {
                 id: 24,
-                title: "AI Project 1",
+                title: "One to one show - Bayoumi Foaud",
                 package: "package4",
                 videoUrl: "https://youtu.be/zw7r416d_Vw?si=pVB0gePiAKOHWfpx",
             },
             {
                 id: 25,
-                title: "AI Project 2",
+                title: "One to one show - Yousra",
                 package: "package4",
                 videoUrl: "https://youtu.be/NaKb_4gnVhA?si=9ACMSbuiaKMSSf1G",
             },
             {
                 id: 26,
-                title: "AI Project 3",
+                title: "One to one show - Karim Fahmy",
                 package: "package4",
                 videoUrl: "https://youtu.be/Z3yoMz_czVQ?si=VwN-vJmcBydr5Rxx",
             },
-            {
+{
                 id: 35,
-                title: "AI Project 12",
+                title: "E-Bank Prouduction",
                 package: "package4",
                 videoUrl: "https://drive.google.com/file/d/1riJ0lNQIVNhhG-2ch6LeI1Ap9ygNN6de/view?usp=sharing",
             }, 
             {
                 id: 38,
-                title: "AI Project 15",
+                title: "ZORA - Ai Production",
                 package: "package4",
                 videoUrl: " https://drive.google.com/file/d/1bLHsi9UAKp_hkSAfzYYPU07MYNdRghve/view?usp=sharing",
             },
@@ -485,7 +485,7 @@ const Projects = () => {
             },
 
             {
-                id: 38,
+                id: 39,
                 title: "AI Project 16",
                 package: "package4",
                 videoUrl: "https://drive.google.com/file/d/1CjJjaiL00KS0ICvRA8F6i1PecqoXrsNR/view?usp=sharing",
