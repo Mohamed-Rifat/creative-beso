@@ -74,16 +74,23 @@ export default function Navbar() {
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: "spring", stiffness: 120, damping: 18 }}
-        className={`fixed top-0 w-full z-50 backdrop-blur transition-all ${
-          isScrolled
+        className={`fixed top-0 w-full z-50 backdrop-blur transition-all ${isScrolled
             ? "bg-white/90 dark:bg-[#121929]/90 shadow-sm border-b border-gray-200/60 dark:border-gray-700/60"
             : "bg-white dark:bg-[#121929]"
-        }`}
+          }`}
       >
         <div className="max-w-screen-xl mx-auto px-4 h-16 flex items-center justify-between">
           <Link to="/" className="flex items-center">
-            <img src={LogoLight} className="w-12 dark:hidden" />
-            <img src={LogoDark} className="w-12 hidden dark:block" />
+            <img
+              src={LogoLight}
+              className="w-20 md:w-24 dark:hidden"
+              alt="Logo"
+            />
+            <img
+              src={LogoDark}
+              className="hidden w-20 md:w-24 dark:block"
+              alt="Logo"
+            />
           </Link>
 
           <ul className="hidden md:flex items-center gap-6 relative">
@@ -200,10 +207,9 @@ export default function Navbar() {
                     onClick={closeMobileMenu}
                     className={({ isActive }) =>
                       `block px-4 py-3 rounded-xl text-base font-medium transition
-                      ${
-                        isActive
-                          ? "bg-blue-500/10 text-blue-600 dark:text-blue-400 font-semibold"
-                          : "text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800"
+                      ${isActive
+                        ? "bg-blue-500/10 text-blue-600 dark:text-blue-400 font-semibold"
+                        : "text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800"
                       }`
                     }
                   >
