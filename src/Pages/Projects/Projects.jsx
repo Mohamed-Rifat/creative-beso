@@ -593,10 +593,10 @@ const Projects = () => {
     const videoRefs = useRef({});
     const validFilters = [
         "all",
+        "package1",
         "package4",
         "package2",
         "package3",
-        "package1",
     ];
 
     const urlFilter = searchParams.get("filter");
