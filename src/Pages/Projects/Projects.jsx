@@ -558,14 +558,14 @@ const projectsData = [
         videoId: "GOPffB-n0NY",
     },
 
-    {
-        id: 42,
-        title: "E-Bank - Official Ad - 2025",
-        description:
-            "Professional voice over for a major brand campaign",
-        package: "package1",
-        videoId: "S1wKM_wyziY",
-    },
+    // {
+    //     id: 42,
+    //     title: "E-Bank - Official Ad - 2025",
+    //     description:
+    //         "Professional voice over for a major brand campaign",
+    //     package: "package1",
+    //     videoId: "S1wKM_wyziY",
+    // },
 
     {
         id: 4,
